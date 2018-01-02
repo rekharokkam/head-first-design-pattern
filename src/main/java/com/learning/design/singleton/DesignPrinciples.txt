@@ -1,0 +1,4 @@
+Definition
+----------
+Ensures only one instance of the class exists and provides a global point of access to it.
+

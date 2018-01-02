@@ -1,0 +1,31 @@
+Model - Responsible for all the Data, State and Application Logic.
+View - The User Interface the client gets to see. Its the Window to the Model. Represents the State of the Model. Never alters the Model just uses its state to display.
+Controller - Creamy part in between the View and Model. Responsible for manipulating the model for user actions it gets from View.
+
+Controller logic can also be added to View layer but generally it is not done so because of 2 reasons
+1) View code gets complicated with 2 responsibilities - managing the user interface and dealing with the logic of controlling the model.
+2) Tight coulpling of view with model.
+
+Design Patterns in MVC.
+-----------------------
+
+1) Strategy - View and Controller use this pattern. Controller is the behaviour of the View. 
+View is configured with a Strategy Object (Controller). View is concerned with only the visual aspects of the application and delegates to the controller for all the user actions.
+This pattern helps the View layer to be decoupled from Model because its the Controller that is reponsible for interacting with the Model to carry out the user requests.
+Controllers can be easily exchanged by the View to change the behaviour.
+
+2) Observer - Model uses Observer to intimate View and Controller about the latest state changes.
+Using this pattern completely decouples the Model from View and Controller.  It also provides the flexibility of using more than one View with the same model.
+
+3) Composite - View uses this pattern internally to manage the UI Components - windows, buttons and other display elements. View consists of a nested set of windows, panels, buttons and so on.
+Each display component is a composite (Window) or a leaf (button). When the Controller tells the View to update, View only has to update the top view component, 
+	and the composite takes care of the rest. 
+
+Flow 
+----
+
+User Interacts with the View.
+View delegates the user action to Controller. Controller interprets them and accordingly manipulates the Model.
+	Some times Controller also tells the View to change as a result of user action.
+When the state of Model changes as a result of user action / internal change it notifies the View about the State change.
+View gets the State it displays directly from the Model. View might also ask the Model for state when Controller requests some change in the View.

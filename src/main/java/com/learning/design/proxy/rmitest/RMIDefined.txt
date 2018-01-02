@@ -1,0 +1,7 @@
+What RMI does for us is : It generats the client and service helper objects. 
+Client Helper - Stub
+Service Helper - Skeleton
+
+Stub implements the same interface as that of the Service Object (Remote Object). Hence a Client calls methods on the stub assuming it to be the real service object.
+
+

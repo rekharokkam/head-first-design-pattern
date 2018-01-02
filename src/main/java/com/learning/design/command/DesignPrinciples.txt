@@ -1,0 +1,11 @@
+Definition
+----------
+Encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+Points to remember
+-----------------
+
+In general we strive for dumb Command classes to have a good level of decoupling between the Invoker and the Receiver classes. 
+This also helps in parameterising the command classes with different receivers.
+
+

@@ -1,0 +1,28 @@
+2 different patterns are covered in this chapter
+
+Definition
+----------
+
+Factory Method Pattern defines an interface for creating an object, but lets the subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+Design Principle
+----------------
+Depend upon abstractions. Do not depend upon concrete classes.
+
+Dependency Inversion Principle - suggests that high-level components should not depend on low-level components, rather both should depend on abstractions.
+
+Comparing Factory Method Pattern and Abstract Factory Pattern
+-------------------------------------------------------------
+
+
+FMP - relies on Inheritance.Object creation is delegated to subclasses which encapsulate the logic of generating the concrete products.
+AFP - relies on Object Composition. 
+
+FMP - Creates a Single Product
+AFP - Creates a family of Products.
+
+Both the Factory Patterns Encapsulate Object Creation.
+Both the Patterns promote loose coupling by making the client code depend on interface and not on the concrete Classes. 
+There by we also follow the principle - Program to interface and not to implementation .

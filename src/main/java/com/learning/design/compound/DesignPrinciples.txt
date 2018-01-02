@@ -1,0 +1,6 @@
+Definition
+----------
+Compound pattern combines 2 or more patterns into a solution that solves a recurring or general problem.
+
+
+

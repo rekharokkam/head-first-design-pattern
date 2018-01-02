@@ -1,0 +1,15 @@
+<project name="Model2DesignPattern" default="All" basedir=".">		
+	
+	<property file="model2Build.properties"/>	
+	
+	<target name="compile" description="This target complies all the source files">
+		<javac srcdir="${javaSrc}" destdir="C:/Rekha/Testing_Workspace/model2/WEB-INF/classes" classpath="C:/Rekha/Testing_Workspace/CoreJava/lib/servlet-api.jar">
+			<include name="com/book/designpattern/compoundpattern/model2/controller/*.java"/>
+		</javac>
+		
+		<copy todir="C:/Rekha/Testing_Workspace/model2/jsp" file="C:/Rekha/Testing_Workspace/CoreJava/src/com/book/designpattern/compoundpattern/model2/view/DJView.jsp"/>
+	</target>
+	
+	<target name="All" depends="compile" description="This target performs all the actions"/>
+	
+</project>

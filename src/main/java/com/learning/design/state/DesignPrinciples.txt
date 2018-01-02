@@ -1,0 +1,19 @@
+Definition
+----------
+Allows an object to alter its behavior when its internal state changes. The object will appear to change the class.
+
+Comparison between State and Strategy Pattern
+---------------------------------------------
+
+State - Can be thought of as an alternative to putting lots of conditionals in the context object. Change of state causes change of context object behaviour.
+Strategy - Can be thought of as an alternative to subclassing. With Strategy, behaviour can be changed during runtime by changing the strategy object composed by the object. (Fly behaviour of ducks)
+
+State - Set of behaviours are encapsulated in a set of State classes. 
+		Current state of the context object changes across the defined set of states in the context object there by changing the behaviour of Context object.
+		Client has very less or no idea about the state classes.
+		
+Strategy - Set of behaviours are encapsulated in a set of Strategy classes.
+		   Client decides upon the strategy object to be used. (Some of the ducks had flying behaviour and some of them couldnt fly).
+		   
+State - Client has no control on changing the State object inside of Context.
+Srategy - Client has the flexibility to change the behaviour during ruintime by setting a different strategy object context object is composed of.

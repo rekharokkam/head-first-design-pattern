@@ -1,0 +1,41 @@
+2 different patterns are covered in this chapter
+
+Definition
+----------
+
+Adapter Pattern - Converts the interface of a class into another interface the client expects. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+
+Facade Pattern - Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
+
+Design Guidelines
+-----------------
+When you need to use an existing class and its interface is not the one needed then use an ADAPTER to change the interface.
+When it is needed to simplify and unify a large or complex set of interfaces/subsystem then use a FACADE.
+
+Design Principle
+----------------
+Principle of Least Knowledge - Talk only to your immediate friends.
+For any object, care should be taken for the number of classes the Object interacts with and also how it comes to interact with those classes.
+
+Guidelines by this Principle are :
+
+Consider any Object, now from any method inside of this Object invoke methods tat belong to
+
+1) The Object itself
+2) Objects passed in as parameter to the method 
+3) Any Object created inside the method or instantiated inside the method
+4) Any Components of the Object
+5) Do not call methods on the objects returned from calling other methods.
+
+
+Comparison between Adapter and Decorator
+----------------------------------------
+
+ Adapter - Wraps an Object(s) to change its interface to some thing client expects.
+ Decorator - Wraps an Object to add new behaviours and responsibilities
+ Facade - Wraps a set of Objects to simply.
+ 
+ Adapter - Intent is to Alter an interface into the one that a client is expecting.
+ Decorator - Doesnt alter the interface but adds additional responsibiity. 
+ Facade - Intent is to provide a simplied interface to a complex subsytem
+

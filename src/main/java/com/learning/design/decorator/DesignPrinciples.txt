@@ -1,0 +1,12 @@
+Definition
+----------
+Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+Design Principle
+----------------
+
+Classes should be Closed for modification and Open for extension
+
+Decorator pattern provides an alternative to subclassing for extending behaviour.
+
+

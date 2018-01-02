@@ -1,0 +1,27 @@
+Definition
+----------
+Provides a surrogate or placeholder for another object to control access to it.
+Proxy - A stand in for a real object.
+
+Three patterns that fall into this category covered in this chapter :
+
+1) Remote Proxy - Controls access to remote object
+2) Virtual Proxy - controls access to resource that is expensive to create
+3) Protection Proxy - controls access to resource based on access rights.
+
+
+Proxy Pattern has the following Objects (Class diagram - Pg No. 461)
+
+1) Interface - Subject - has request(). Both real subject and the Proxy Object implement the Subject interface. This allows the client to treat the proxy just like the real object.
+2) Real Subject - Remote Object - implements the Subject interface. This Object is the one that does the real work. Proxy controls access to this object.
+3) Proxy - implements the Subject interface. 
+			Proxy keeps a reference to the subject (real object) so it can forward the requests when necessary. Proxy often instantiates / handles the creation of real subject.
+			Proxy can be substituted for a real subject.
+			Clients interact with the real subject through the proxy.
+			Proxy controls the access to the real subject as
+				Real Subject could be running on the remote machine (Remote Proxy)
+				Real Subject is expensive to create (Virtual Proxy)
+				Real Subject needs to be protected in some way (Dynamic Proxy).
+				
+
+

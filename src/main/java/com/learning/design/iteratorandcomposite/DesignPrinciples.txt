@@ -1,0 +1,14 @@
+2 different patterns are covered in this chapter
+
+Definition
+----------
+Iterator Pattern - provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+Composite Pattern - allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+Design Principle
+----------------
+
+A class should have only one reason to change.
+This principle guides to assign only one responsibility to a class and only one class. - SRP - Single Responsibiity Principle
+
