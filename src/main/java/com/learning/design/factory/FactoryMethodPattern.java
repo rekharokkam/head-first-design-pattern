@@ -21,7 +21,7 @@ System.out.println(chicagoPizzaStore.orderPizza("cheese"));
 }
 
 /*
- * This class is abstract because its attributes are different for different subclasses even though the behaviour (methods) remain the same for all the subclasses
+ * This class is abstract because its attributes are different for different subclasses even though the behavior (methods) remain the same for all the subclasses
  */
 abstract class FMPizza
 {
@@ -142,17 +142,17 @@ class ChicagoStyleVeggiePizza extends FMPizza
 
 /*
  * This is Abstract Creator Class.
- * It defines an abstract factory method tat the subclasses implement to create products.
+ * It defines an abstract factory method that the subclasses implement to create products.
  * Any other method implemented in the Abstract Creator are written to operate on the product produced by the factory method.
- * Abstract Creator has no knowledge of the concrete product tat would be created in the factory method which is purely decide by the subclasses. 
+ * Abstract Creator has no knowledge of the concrete product that would be created in the factory method which is purely decide by the subclasses. 
  */
 abstract class FMPizzaStore
 {	
 	/*
 	 * This is the FACTORY METHOD.
 	 * Factory method handles Object creation and encapsulates in a subclass.
-	 * It is abstract so tat the subclasses can decide which class to create and there by client code (here the orderPizza method) does not know the concrete product it is working on.
-	 * This method returns a product tat is usually being used in the other methods of Superclass - FMPizzaStore.
+	 * It is abstract so that the subclasses can decide which class to create and there by client code (here the orderPizza method) does not know the concrete product it is working on.
+	 * This method returns a product that is usually being used in the other methods of Superclass - FMPizzaStore.
 	 * Factory Method normally returns a single Product.
 	 * 
 	 */
@@ -177,7 +177,7 @@ abstract class FMPizzaStore
 
 /*
  * Factory Method Pattern encapsulates the Object creation by letting the subclasses decide which objects to create
- * These subclasses tat produce products are called Concrete Creators
+ * These subclasses that produce products are called Concrete Creators
  */
 
 class FMNYPizzaStore extends FMPizzaStore

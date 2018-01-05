@@ -6,6 +6,6 @@ Points to remember
 -----------------
 
 In general we strive for dumb Command classes to have a good level of decoupling between the Invoker and the Receiver classes. 
-This also helps in parameterising the command classes with different receivers.
+This also helps in parameterizing the command classes with different receivers.
 
 

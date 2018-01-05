@@ -126,10 +126,10 @@ interface Command
 {
 	/*
 	 * execute method encapsulates different actions of receiver to fulfill the request.
-	 * In this method Command asks the receiver to perform action(s) to fulfil request.
+	 * In this method Command asks the receiver to perform action(s) to fulfill request.
 	 * 
 	 * Apart from the Command class no other Object on the outside has the knowledge of what action(s) gets performed and on what Receiver. 
-	 * They just know tat calling execute() on Command Object would fulfill their request. 
+	 * They just know that calling execute() on Command Object would fulfill their request. 
 	 */
 	void execute ();
 	void undo();
