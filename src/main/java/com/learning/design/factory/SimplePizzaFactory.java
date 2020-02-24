@@ -39,7 +39,7 @@ class SimplePizzaStore
 	}
 	
 	/*
-	 * This part of the code is what varies so has been moved from the part of the code tat remains the same.
+	 * This part of the code is what varies so has been moved from the part of the code that remains the same.
 	FMPizza createPizza (String type)
 	{
 		FMPizza pizza = null;
@@ -60,7 +60,7 @@ class SimplePizzaStore
 		FMPizza pizza = simplePizzaFactory.createPizza (type);
 		
 		/*
-		 * This is the part of the code tat varies. Because in future if any new variety of pizza is added this part of the code changes.
+		 * This is the part of the code that varies. Because in future if any new variety of pizza is added this part of the code changes.
 		 * So its been moved out to SimplePizzaFactory class.
 		 * If in future if pizza stores pffering changes then this code needs to be modified.
 		 * So here this part of the code is not closed for modification.

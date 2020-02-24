@@ -59,10 +59,10 @@ public class CompositePattern
 
 /*
  * Composite Pattern we can apply the same operations over both composites and individual objects. In most cases we can ignore the difference between composites and individual objects.
- * By putting both menu and menuitem in the same structure we create a part-whole hierarchy, tat can be treated as a whole.
+ * By putting both menu and menuitem in the same structure we create a part-whole hierarchy, that can be treated as a whole.
  * 
  * Elements with children are called Nodes/Composites. Elements without children are called leaves / Individual Objects.
- * Components tat contain other components are called Composites. Components tat dont contain other components are called Leaf nodes.
+ * Components that contain other components are called Composites. Components that dont contain other components are called Leaf nodes.
  * 
  * 
  * Component interface defines a common interface for all the objects in the composition - both composites and leaf nodes and allows the client to treat both uniformly.
@@ -70,7 +70,7 @@ public class CompositePattern
  * 
  * This pattern is to be used when we want to treat both composites and individual objects alike.
  * Treating them alike is being able to execute same operations on both.
- * The greatest strength of Composite pattern is tat it simplifies the life of the client.
+ * The greatest strength of Composite pattern is that it simplifies the life of the client.
  * Clients dont have to worry about differentiating between composites and individual objects same operation can be executed on both of them.
  */
 abstract class MenuComponent

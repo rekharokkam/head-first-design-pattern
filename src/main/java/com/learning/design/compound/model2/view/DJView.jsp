@@ -14,7 +14,7 @@
 		<form action="/model2/controller/BeatController" method="get">
 			<table border="2">
 				<tr>
-					<%--Extracts the Model's state information from the Javabean to build the User Interface --%>
+					<%--Extracts the Model's sthate information from the Javabean to build the User Interface --%>
 					<td colspan="3">Beats per minute : <jsp:getProperty name="beatModel" property="BPM"/></td>
 				</tr>
 				

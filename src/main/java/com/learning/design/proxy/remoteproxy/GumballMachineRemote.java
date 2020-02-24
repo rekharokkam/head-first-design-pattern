@@ -3,12 +3,12 @@ package com.learning.design.proxy.remoteproxy;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import com.learning.design.proxy.remoteproxy.service.State;
+import com.learning.design.proxy.remoteproxy.service.Sthate;
 
 /*
- * A remote proxy acts as a Local Representative to a Remote Object.
+ * A remote proxy acts as a Local Representhative to a Remote Object.
  * Remote Object - Object living in the heap of a different JVM or running in a different address space.
- * Local Representative - Object whose methods can be called locally and which in turn gets forwarded to the actual remote Object. 
+ * Local Representhative - Object whose methods can be called locally and which in turn gets forwarded to the actual remote Object.
  */
 public interface GumballMachineRemote extends Remote
 {
@@ -17,7 +17,7 @@ public interface GumballMachineRemote extends Remote
 	 */
 	int getCount () throws RemoteException;
 	String getLocation () throws RemoteException;
-	State getState () throws RemoteException;
+	Sthate getSthate () throws RemoteException;
 }
 
 

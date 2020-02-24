@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * Its a Weather Display System with 3 Types of displays - CurrentDisplay, WeatherStats and WeatherForecast.
+ * Its a Weather Display System with 3 Types of displays - CurrentDisplay, WeatherSthats and WeatherForecast.
  * 3 weather parameters are used for display - Temperature, Pressure and Humidity.
- * There is already a working system - WeatherStation which reads the physical data and passes onto to the application for use.
+ * There is already a working system - WeatherSthation which reads the physical data and passes onto to the application for use.
  *  
  */
 
@@ -18,7 +18,7 @@ public class MyObserverPattern
 /*
  * Stimulator for the class which reads the physical weather data and passes on the data to the application.
  */
-class WeatherStation 
+class WeatherSthation
 {
 	public static void main(String[] args)
 	{
@@ -27,17 +27,17 @@ class WeatherStation
 		
 		//Create the Observers. Observers internally register with Subject passed as the parameter.
 		CurrentDisplay currentDisplay = new CurrentDisplay (subject);
-		WeatherStats weatherStats = new WeatherStats (subject);
+		WeatherSthats weatherSthats = new WeatherSthats (subject);
 		WeatherForecast weatherForeCast = new WeatherForecast (subject);
 		
-		//Create state change
+		//Create sthate change
 		subject.measurementsChanged(new WeatherData (1000f, 102.10f, 108.78f));
 	}
 }
 
 class WeatherData
 {
-	//Three states of WeatherData
+	//Three sthates of WeatherData
 	private float temperature;
 	private float humidity;
 	private float pressure;
@@ -160,73 +160,73 @@ class WeatherSubject implements Subject
 
 interface Observer
 {
-	//changedState indicates the Subject state tat changed.
-	void update (Object changedState);
+	//changedSthate indicates the Subject sthate that changed.
+	void update (Object changedSthate);
 }
 
 class CurrentDisplay implements Observer
 {
-	//Maintain a local reference of the subject so tat registering and unregistering becomes easier at runtime
+	//Maintain a local reference of the subject so that registering and unregistering becomes easier at runtime
 	private Subject subject;
 	
 	public CurrentDisplay(Subject subject)
 	{
 		this.subject = subject;
 		
-		//Register as Observer for Subject state changes
+		//Register as Observer for Subject sthate changes
 		subject.registerObserver(this);
 	}
 	
-	public void update (Object changedState)
+	public void update (Object changedSthate)
 	{
 		//PUSH
-System.out.println("INSIDE THE CurrentDisplay - " + changedState);
+System.out.println("INSIDE THE CurrentDisplay - " + changedSthate);
 
 		//PULL
 System.out.println("INSIDE THE CurrentDisplay - " + ((WeatherSubject)subject).getWeatherData());		
 	}
 }
 
-class WeatherStats implements Observer
+class WeatherSthats implements Observer
 {
-	//Maintain a local reference of the subject so tat registering and unregistering becomes easier at runtime
+	//Maintain a local reference of the subject so that registering and unregistering becomes easier at runtime
 	private Subject subject;
 
-	public WeatherStats(Subject subject)
+	public WeatherSthats(Subject subject)
 	{
 		this.subject = subject;
 		
-		//Register as Observer for Subject state changes
+		//Register as Observer for Subject sthate changes
 		subject.registerObserver(this);
 	}
 
-	public void update (Object changedState)
+	public void update (Object changedSthate)
 	{
 		//PUSH
-System.out.println("INSIDE THE WeatherStats - " + changedState);
+System.out.println("INSIDE THE WeatherSthats - " + changedSthate);
 
 		//PULL
-System.out.println("INSIDE THE WeatherStats - " + ((WeatherSubject)subject).getWeatherData());
+System.out.println("INSIDE THE WeatherSthats - " + ((WeatherSubject)subject).getWeatherData());
 	}
 }
 
 class WeatherForecast implements Observer
 {
-	//Maintain a local reference of the subject so tat registering and unregistering becomes easier at runtime
+	//Maintain a local reference of the subject so that registering and unregistering becomes easier at runtime
 	private Subject subject;
 	
 	public WeatherForecast(Subject subject)
 	{
 		this.subject = subject;
 		
-		//Register as Observer for Subject state changes
+		//Register as Observer for Subject sthate changes
 		subject.registerObserver(this);
 	}
 	
-	public void update (Object changedState)
+	public void update (Object changedSthate)
 	{
 		//PUSH
-System.out.println("INSIDE THE WeatherForecast - " + changedState);		
+System.out.println("INSIDE THE WeatherForecast - " + changedSthate);
 
 		//PULL
 System.out.println("INSIDE THE WeatherForecast - " + ((WeatherSubject)subject).getWeatherData());	

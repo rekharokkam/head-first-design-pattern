@@ -1,7 +1,7 @@
 package com.learning.design.command;
 
 /*
- * Command Pattern decouples the Object making a request from the Object tat performs the request (Receiver)
+ * Command Pattern decouples the Object making a request from the Object that performs the request (Receiver)
  * Requester - Client Object and Receiver - Vendor classes
  * 
  *  

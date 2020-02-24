@@ -7,7 +7,7 @@ public abstract class Duck implements Quackable
 	/*
 	 * One class One Responsibility. 
 	 * Duck has only one responsibility of Quacking. 
-	 * Observer pattern responsibility is handled by a different class (DuckSubject) and all the oberver pattern calls (registerObserver, notifyObservers) are delegated to tat class.
+	 * Observer pattern responsibility is handled by a different class (DuckSubject) and all the oberver pattern calls (registerObserver, notifyObservers) are delegated to that class.
 	 */
 	private DuckObservable observable; 
 	

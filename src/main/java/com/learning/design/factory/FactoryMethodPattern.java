@@ -159,7 +159,7 @@ abstract class FMPizzaStore
 	protected abstract FMPizza createPizza (String type);
 	
 	/*
-	 * Abstract Creator often contains code tat depends on the anstract product returned by the factory method implemented by the subclasses.
+	 * Abstract Creator often contains code that depends on the anstract product returned by the factory method implemented by the subclasses.
 	 * 
 	 */
 	FMPizza orderPizza (String type)
@@ -183,7 +183,7 @@ abstract class FMPizzaStore
 class FMNYPizzaStore extends FMPizzaStore
 {
 	/*
-	 * Factory Method implementation by the subclass
+	 * Factory Method implementhation by the subclass
 	 */
 	protected FMPizza createPizza (String type)
 	{
@@ -203,7 +203,7 @@ class FMNYPizzaStore extends FMPizzaStore
 class FMChicagoPizzaStore extends FMPizzaStore
 {
 	/*
-	 * Factory Method implementation by the subclass
+	 * Factory Method implementhation by the subclass
 	 */
 	protected FMPizza createPizza (String type)
 	{

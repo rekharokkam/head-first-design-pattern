@@ -18,7 +18,7 @@ abstract class CaffeineBeverage
 {
 	/*
 	 * This is the Template Method.
-	 * Template Method defines the steps of an algorithm and allows the subclasses to provide implementation for one or more steps.
+	 * Template Method defines the steps of an algorithm and allows the subclasses to provide implementhation for one or more steps.
 	 * Template Method defines an algorithm as a set of Steps. One or more steps are defined to be abstract and implemented by the subclasses.
 	 * Algorithms structure remains the same and is not altered. 
 	 * 

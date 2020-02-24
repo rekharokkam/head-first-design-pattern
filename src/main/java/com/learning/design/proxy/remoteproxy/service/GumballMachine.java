@@ -15,80 +15,80 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
 	
 	private String location;
 	
-	private State noQuarterState ;
-	private State hasQuarterState ;
-	private State soldState;
-	private State soldOutState;
-	private State winnerState;
+	private Sthate noQuarterSthate ;
+	private Sthate hasQuarterSthate ;
+	private Sthate soldSthate;
+	private Sthate soldOutSthate;
+	private Sthate winnerSthate;
 	
 	private int gumballCount;
-	private State currentState = soldOutState;
+	private Sthate currentSthate = soldOutSthate;
 	
 	public GumballMachine (int gumballCount, String location) throws RemoteException
 	{
-		noQuarterState = new NoQuarterState (this);
-		hasQuarterState = new HasQuarterState (this);
-		soldState = new SoldState (this);		
-		soldOutState = new SoldoutState (this);
-		winnerState = new WinnerState (this);
+		noQuarterSthate = new NoQuarterSthate (this);
+		hasQuarterSthate = new HasQuarterSthate (this);
+		soldSthate = new SoldSthate (this);
+		soldOutSthate = new SoldoutSthate (this);
+		winnerSthate = new WinnerSthate (this);
 		
 		this.gumballCount = gumballCount;
 		this.location = location;
 		
 		if (gumballCount > 0)
 		{
-			currentState = noQuarterState;
+			currentSthate = noQuarterSthate;
 		}
 	}
 
-	public State getHasQuarterState()
+	public Sthate getHasQuarterSthate()
 	{
-		return hasQuarterState;
+		return hasQuarterSthate;
 	}
 
-	public void setHasQuarterState(State hasQuarterState)
+	public void setHasQuarterSthate(Sthate hasQuarterSthate)
 	{
-		this.hasQuarterState = hasQuarterState;
+		this.hasQuarterSthate = hasQuarterSthate;
 	}
 
-	public State getNoQuarterState()
+	public Sthate getNoQuarterSthate()
 	{
-		return noQuarterState;
+		return noQuarterSthate;
 	}
 
-	public void setNoQuarterState(State noQuarterState)
+	public void setNoQuarterSthate(Sthate noQuarterSthate)
 	{
-		this.noQuarterState = noQuarterState;
+		this.noQuarterSthate = noQuarterSthate;
 	}
 
-	public State getSoldOutState()
+	public Sthate getSoldOutSthate()
 	{
-		return soldOutState;
+		return soldOutSthate;
 	}
 
-	public void setSoldOutState(State soldOutState)
+	public void setSoldOutSthate(Sthate soldOutSthate)
 	{
-		this.soldOutState = soldOutState;
+		this.soldOutSthate = soldOutSthate;
 	}
 
-	public State getSoldState()
+	public Sthate getSoldSthate()
 	{
-		return soldState;
+		return soldSthate;
 	}
 
-	public void setSoldState(State soldState)
+	public void setSoldSthate(Sthate soldSthate)
 	{
-		this.soldState = soldState;
+		this.soldSthate = soldSthate;
 	}
 
-	public State getCurrentState()
+	public Sthate getCurrentSthate()
 	{
-		return currentState;
+		return currentSthate;
 	}
 
-	public void setCurrentState(State currentState)
+	public void setCurrentSthate(Sthate currentSthate)
 	{
-		this.currentState = currentState;
+		this.currentSthate = currentSthate;
 	}
 
 	public int getGumballCount()
@@ -101,30 +101,30 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
 		this.gumballCount = gumballCount;
 	}
 	
-	public State getWinnerState()
+	public Sthate getWinnerSthate()
 	{
-		return winnerState;
+		return winnerSthate;
 	}
 
-	public void setWinnerState(State winnerState)
+	public void setWinnerSthate(Sthate winnerSthate)
 	{
-		this.winnerState = winnerState;
+		this.winnerSthate = winnerSthate;
 	}
 	
 	void insertQuarter ()
 	{
-		currentState.insertQuarter();
+		currentSthate.insertQuarter();
 	}
 	
 	void ejectQuarter ()
 	{
-		currentState.ejectQuarter();
+		currentSthate.ejectQuarter();
 	}
 	
 	void turnCrank ()
 	{
-		currentState.turnCrank();
-		currentState.dispense();
+		currentSthate.turnCrank();
+		currentSthate.dispense();
 	}
 	
 	void releaseBall ()
@@ -139,12 +139,12 @@ System.out.println("Your Gumball is rolling out");
 	void refill (int gumballCount)
 	{
 		this.gumballCount = gumballCount;
-		currentState = noQuarterState;
+		currentSthate = noQuarterSthate;
 	}
 	
 	public String toString ()
 	{
-		return "\n\ncurrent state - " + currentState.getStateName() + " :: gumballCount - " + gumballCount + " \n\n";
+		return "\n\ncurrent sthate - " + currentSthate.getSthateName() + " :: gumballCount - " + gumballCount + " \n\n";
 	}
 	
 	public int getCount() 
@@ -162,8 +162,8 @@ System.out.println("Your Gumball is rolling out");
 		this.location = location;
 	}
 	
-	public State getState ()
+	public Sthate getSthate ()
 	{
-		return currentState;
+		return currentSthate;
 	}
 }

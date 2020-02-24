@@ -1,12 +1,12 @@
-package com.learning.design.state;
+package com.learning.design.sthate;
 
 import java.util.Random;
 
-public class StatePattern
+public class SthatePattern
 {
 	public static void main(String[] args)
 	{
-		GumballMachineWithStatePattern gumballMachine = new GumballMachineWithStatePattern (2);
+		GumballMachineWithSthatePattern gumballMachine = new GumballMachineWithSthatePattern (2);
 System.out.println(gumballMachine);	
 
 		gumballMachine.insertQuarter();
@@ -22,92 +22,92 @@ System.out.println(gumballMachine);
 }
 
 /*
- * State Pattern - allows an object to alter its behaviour when its internal state changes. The Object will appear to change its class.
- * First Part of the deifnition - when gumball machine is in NoQuarterstate it accepts coin when inserted but the same machine doesnt accept when it is HasQuarterState.
+ * Sthate Pattern - allows an object to alter its behaviour when its internal sthate changes. The Object will appear to change its class.
+ * First Part of the deifnition - when gumball machine is in NoQuartersthate it accepts coin when inserted but the same machine doesnt accept when it is HasQuarterSthate.
  * Second Part of the deifnition - From the perspective of the client : 
- * 									When an action takes place (when gumball machine state changes) gumball machine exhibitis a total different behaviour as though 
+ * 									When an action takes place (when gumball machine sthate changes) gumball machine exhibitis a total different behaviour as though
  * 									it was instantiated from a different class.
  * 
- * GumballMachine is the "Context". Context is the class tat can have different internal states.
+ * GumballMachine is the "Context". Context is the class that can have different internal sthates.
  * 
- * State Pattern allows Object to have many behaviours based on its internal state.
+ * Sthate Pattern allows Object to have many behaviours based on its internal sthate.
  */
-class GumballMachineWithStatePattern
+class GumballMachineWithSthatePattern
 {
 	static final int FREE_GIFT = 2;
 	
-	private State noQuarterState ;
-	private State hasQuarterState ;
-	private State soldState;
-	private State soldOutState;
-	private State winnerState;
+	private Sthate noQuarterSthate ;
+	private Sthate hasQuarterSthate ;
+	private Sthate soldSthate;
+	private Sthate soldOutSthate;
+	private Sthate winnerSthate;
 	
 	private int gumballCount;
-	private State currentState = soldOutState;
+	private Sthate currentSthate = soldOutSthate;
 	
-	GumballMachineWithStatePattern (int gumballCount)
+	GumballMachineWithSthatePattern (int gumballCount)
 	{
-		noQuarterState = new NoQuarterState (this);
-		hasQuarterState = new HasQuarterState (this);
-		soldState = new SoldState (this);		
-		soldOutState = new SoldoutState (this);
-		winnerState = new WinnerState (this);
+		noQuarterSthate = new NoQuarterSthate (this);
+		hasQuarterSthate = new HasQuarterSthate (this);
+		soldSthate = new SoldSthate (this);
+		soldOutSthate = new SoldoutSthate (this);
+		winnerSthate = new WinnerSthate (this);
 		
 		this.gumballCount = gumballCount;
 		if (gumballCount > 0)
 		{
-			currentState = noQuarterState;
+			currentSthate = noQuarterSthate;
 		}
 	}
 
-	public State getHasQuarterState()
+	public Sthate getHasQuarterSthate()
 	{
-		return hasQuarterState;
+		return hasQuarterSthate;
 	}
 
-	public void setHasQuarterState(State hasQuarterState)
+	public void setHasQuarterSthate(Sthate hasQuarterSthate)
 	{
-		this.hasQuarterState = hasQuarterState;
+		this.hasQuarterSthate = hasQuarterSthate;
 	}
 
-	public State getNoQuarterState()
+	public Sthate getNoQuarterSthate()
 	{
-		return noQuarterState;
+		return noQuarterSthate;
 	}
 
-	public void setNoQuarterState(State noQuarterState)
+	public void setNoQuarterSthate(Sthate noQuarterSthate)
 	{
-		this.noQuarterState = noQuarterState;
+		this.noQuarterSthate = noQuarterSthate;
 	}
 
-	public State getSoldOutState()
+	public Sthate getSoldOutSthate()
 	{
-		return soldOutState;
+		return soldOutSthate;
 	}
 
-	public void setSoldOutState(State soldOutState)
+	public void setSoldOutSthate(Sthate soldOutSthate)
 	{
-		this.soldOutState = soldOutState;
+		this.soldOutSthate = soldOutSthate;
 	}
 
-	public State getSoldState()
+	public Sthate getSoldSthate()
 	{
-		return soldState;
+		return soldSthate;
 	}
 
-	public void setSoldState(State soldState)
+	public void setSoldSthate(Sthate soldSthate)
 	{
-		this.soldState = soldState;
+		this.soldSthate = soldSthate;
 	}
 
-	public State getCurrentState()
+	public Sthate getCurrentSthate()
 	{
-		return currentState;
+		return currentSthate;
 	}
 
-	public void setCurrentState(State currentState)
+	public void setCurrentSthate(Sthate currentSthate)
 	{
-		this.currentState = currentState;
+		this.currentSthate = currentSthate;
 	}
 
 	public int getGumballCount()
@@ -120,33 +120,33 @@ class GumballMachineWithStatePattern
 		this.gumballCount = gumballCount;
 	}
 	
-	public State getWinnerState()
+	public Sthate getWinnerSthate()
 	{
-		return winnerState;
+		return winnerSthate;
 	}
 
-	public void setWinnerState(State winnerState)
+	public void setWinnerSthate(Sthate winnerSthate)
 	{
-		this.winnerState = winnerState;
+		this.winnerSthate = winnerSthate;
 	}
 
 	/*
-	 * Whenever a context gets the request it is delegated to the current state to handle.
+	 * Whenever a context gets the request it is delegated to the current sthate to handle.
 	 */
 	void insertQuarter ()
 	{
-		currentState.insertQuarter();
+		currentSthate.insertQuarter();
 	}
 	
 	void ejectQuarter ()
 	{
-		currentState.ejectQuarter();
+		currentSthate.ejectQuarter();
 	}
 	
 	void turnCrank ()
 	{
-		currentState.turnCrank();
-		currentState.dispense();
+		currentSthate.turnCrank();
+		currentSthate.dispense();
 	}
 	
 	void releaseBall ()
@@ -161,49 +161,49 @@ System.out.println("Your Gumball is rolling out");
 	void refill (int gumballCount)
 	{
 		this.gumballCount = gumballCount;
-		currentState = noQuarterState;
+		currentSthate = noQuarterSthate;
 	}
 	
 	public String toString ()
 	{
-		return "\n\ncurrent state - " + currentState.getStateName() + " :: gumballCount - " + gumballCount + " \n\n";
+		return "\n\ncurrent sthate - " + currentSthate.getSthateName() + " :: gumballCount - " + gumballCount + " \n\n";
 	}
 }
 
 /*
- * State defines a common interface for all the concrete states. Since all the states implement the same interface they are interchangeable.
+ * Sthate defines a common interface for all the concrete sthates. Since all the sthates implement the same interface they are interchangeable.
  * 
- *  State is used by the Context Object to represent its internal state and behavior.
- *  State is not to be called by the client directly. It gets the request only from the context object.
+ *  Sthate is used by the Context Object to represent its internal sthate and behavior.
+ *  Sthate is not to be called by the client directly. It gets the request only from the context object.
  *  
  */
-abstract class State
+abstract class Sthate
 {
-	private String stateName;
-	protected GumballMachineWithStatePattern gumballMachine;
+	private String sthateName;
+	protected GumballMachineWithSthatePattern gumballMachine;
 	
-	State (String stateName, GumballMachineWithStatePattern gumballMachine)
+	Sthate (String sthateName, GumballMachineWithSthatePattern gumballMachine)
 	{
-		this.stateName = stateName;
+		this.sthateName = sthateName;
 		this.gumballMachine = gumballMachine;		
 	}
 	
-	String getStateName ()
+	String getSthateName ()
 	{
-		return stateName;
+		return sthateName;
 	}
 	
-	void setStateName (String stateName)
+	void setSthateName (String sthateName)
 	{
-		this.stateName = stateName;
+		this.sthateName = sthateName;
 	}
 	
-	public GumballMachineWithStatePattern getGumballMachine()
+	public GumballMachineWithSthatePattern getGumballMachine()
 	{
 		return gumballMachine;
 	}
 
-	public void setGumballMachine(GumballMachineWithStatePattern gumballMachine)
+	public void setGumballMachine(GumballMachineWithSthatePattern gumballMachine)
 	{
 		this.gumballMachine = gumballMachine;
 	}
@@ -215,20 +215,20 @@ abstract class State
 }
 
 /*
- * Concrete States fulfill all the requests made on the Context object.
- * Each State provides its own implementation for a request. Hence Context behaves different when its current state changes.
+ * Concrete Sthates fulfill all the requests made on the Context object.
+ * Each Sthate provides its own implementhation for a request. Hence Context behaves different when its current sthate changes.
  */
-class NoQuarterState extends State
+class NoQuarterSthate extends Sthate
 {
-	NoQuarterState (GumballMachineWithStatePattern gumballMachine)
+	NoQuarterSthate (GumballMachineWithSthatePattern gumballMachine)
 	{
-		super ("No Quarter State", gumballMachine);
+		super ("No Quarter Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
 	{
 System.out.println("Your Cent has been accepted");
-		gumballMachine.setCurrentState(gumballMachine.getHasQuarterState());
+		gumballMachine.setCurrentSthate(gumballMachine.getHasQuarterSthate());
 	}
 	
 	public void ejectQuarter ()
@@ -247,13 +247,13 @@ System.out.println("There is no coin to dispense the gumball");
 	}
 }
 
-class HasQuarterState extends State
+class HasQuarterSthate extends Sthate
 {
 	private Random randomWinner = new Random (System.currentTimeMillis());
 	
-	HasQuarterState (GumballMachineWithStatePattern gumballMachine)
+	HasQuarterSthate (GumballMachineWithSthatePattern gumballMachine)
 	{
-		super ("Has Quarter State", gumballMachine);
+		super ("Has Quarter Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -264,20 +264,20 @@ System.out.println("You have already inserted the coin. Please wait till u get t
 	public void ejectQuarter ()
 	{
 System.out.println("Here is the coin u inserted");
-		gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+		gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 	}
 	
 	public void turnCrank ()
 	{
 System.out.println("You have turned the crank and here comes your gumball");
 		int winner = randomWinner.nextInt(10);
-		if ( (winner == 0) && (gumballMachine.getGumballCount() >= GumballMachineWithStatePattern.FREE_GIFT))
+		if ( (winner == 0) && (gumballMachine.getGumballCount() >= GumballMachineWithSthatePattern.FREE_GIFT))
 		{
-			gumballMachine.setCurrentState(gumballMachine.getWinnerState());
+			gumballMachine.setCurrentSthate(gumballMachine.getWinnerSthate());
 		}
 		else
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldSthate());
 		}
 	}
 	
@@ -288,16 +288,16 @@ System.out.println("Please wait..........");
 }
 
 /*
- * Dispensing of  gum balls i.e the winner could be put in the Soldstate itself but
- * It would mean representing 2 different states (Winner and no winner) in the same state class.
+ * Dispensing of  gum balls i.e the winner could be put in the Soldsthate itself but
+ * It would mean representing 2 different sthates (Winner and no winner) in the same sthate class.
  * So the clarity of the class would be lost.
- * Also the Principle - One class One responsibility would be lost by providing 2 different responsibilities to SoldState class.
+ * Also the Principle - One class One responsibility would be lost by providing 2 different responsibilities to SoldSthate class.
  */
-class SoldState extends State
+class SoldSthate extends Sthate
 {
-	SoldState (GumballMachineWithStatePattern gumballMachine)
+	SoldSthate (GumballMachineWithSthatePattern gumballMachine)
 	{
-		super ("Sold State", gumballMachine);
+		super ("Sold Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -321,20 +321,20 @@ System.out.println("Your gumball has been dispensed");
 		gumballMachine.releaseBall();
 		if (gumballMachine.getGumballCount() > 0)
 		{
-			gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+			gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 		}
 		else 
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldOutSthate());
 		}		
 	}
 }
 
-class SoldoutState extends State
+class SoldoutSthate extends Sthate
 {
-	SoldoutState (GumballMachineWithStatePattern gumballMachine)
+	SoldoutSthate (GumballMachineWithSthatePattern gumballMachine)
 	{		
-		super ("Soldout State", gumballMachine);
+		super ("Soldout Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -358,11 +358,11 @@ System.out.println("There is no gumball in the machine to dispense");
 	}
 }
 
-class WinnerState extends State
+class WinnerSthate extends Sthate
 {
-	WinnerState (GumballMachineWithStatePattern gumballMachine)
+	WinnerSthate (GumballMachineWithSthatePattern gumballMachine)
 	{
-		super ("Winner State", gumballMachine);
+		super ("Winner Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -384,18 +384,18 @@ System.out.println("Gumball is on the way. Please wait");
 	{
 System.out.println("Congrats you won. Here is your gift");
 
-		for (int i = 0; i < GumballMachineWithStatePattern.FREE_GIFT; i++)
+		for (int i = 0; i < GumballMachineWithSthatePattern.FREE_GIFT; i++)
 		{
 			gumballMachine.releaseBall();
 		}
 		
 		if (gumballMachine.getGumballCount() == 0)
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldOutSthate());
 		}
 		else
 		{
-			gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+			gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 		}
 	}
 }

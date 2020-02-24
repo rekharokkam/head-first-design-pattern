@@ -2,9 +2,9 @@ package com.learning.design.strategy;
 
 /*
  * This is an extension to Step1 class.
- * In this Step since fly and makeSound methods are not exhibited by all the child classes they are moved out of the main class into a seperate interface.
- * So tat any class exhibiting these behaviours can seperately implement these interfaces.
- * Addition of any new Child can implment from the interfaces depending on the behaviours exhibited by them. 
+ * In this Step since fly and makeSound methods are not exhibited by all the child classes they are moved out of the main class into a separate interface.
+ * So that any class exhibiting these behaviours can separately implement these interfaces.
+ * Addition of any new Child can implement from the interfaces depending on the behaviours exhibited by them.
  */
 public class Step2 
 {
@@ -21,13 +21,12 @@ abstract class Duck2
 	/*
 	 * All child classes get this behaviour through inheritance.
 	 */
-	void swim ()
-	{
-System.out.println("Inside the swim method of the Duck2 class");
+	void swim (){
+		System.out.println("Inside the swim method of the Duck2 class");
 	}
 	
 	/*
-	 * These methods are moved into seperate interfaces so tat any class exhibiting these behaviours can implement from those interfaces
+	 * These methods are moved into separate interfaces so that any class exhibiting these behaviours can implement from those interfaces
 	 * 
 	 * Some child classes have this behaviour and some classes dont.
 	 
@@ -96,7 +95,7 @@ System.out.println("RedHeadDuck2 - flying");
 
 /*
  * This child class doesnt have the fly behaviour.
- * And also the make sound behaviour is different from tat of MallardDuck and RedHeadDuck
+ * And also the make sound behaviour is different from that of MallardDuck and RedHeadDuck
  */
 class RubberDuck2 extends Duck2 implements Quackable
 {

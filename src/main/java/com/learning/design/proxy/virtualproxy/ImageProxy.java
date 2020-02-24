@@ -8,10 +8,10 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 /*
- * Virtual Proxy acts as a representative for an object tat may be expensive to create. 
+ * Virtual Proxy acts as a representhative for an object that may be expensive to create.
  * VP often defers the creation of the object until it is needed.
  * VP also acts as a surrogate for the real object before and while it is being created.
- * After tat VP directly delegates the request to the Real Subject.
+ * After that VP directly delegates the request to the Real Subject.
  */
 public class ImageProxy implements Icon
 {

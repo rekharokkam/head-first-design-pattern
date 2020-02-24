@@ -138,7 +138,7 @@ exception.printStackTrace(System.err);
 	}
 	
 	/*
-	 * Informs the Observers (View) about the changes int the State.
+	 * Informs the Observers (View) about the changes int the Sthate.
 	 * Model is not aware of who its Observers are. There by its decoupled from other layers.
 	 */
 	public void notifyBeatObservers()

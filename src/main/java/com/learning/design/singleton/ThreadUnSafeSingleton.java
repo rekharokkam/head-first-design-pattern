@@ -11,12 +11,12 @@ public class ThreadUnSafeSingleton
  * Since the single instance is static a global access point to the single instance is provided.
  * Mostly singleton is created lazily.
  * 
- * Javas implementation of Singleton involves - private constructor, a static method combined with a static variable.
+ * Javas implementhation of Singleton involves - private constructor, a static method combined with a static variable.
  */
 class ThreadUnsafeChocolateBoiler
 {
 	/*
-	 * Static variable for class instance so tat only one instance of the class exists and also a global access point to the instance is provided.
+	 * static variable for class instance so that only one instance of the class exists and also a global access point to the instance is provided.
 	 */
 	private static ThreadUnsafeChocolateBoiler threadUnsafeChocolateBoiler;
 	

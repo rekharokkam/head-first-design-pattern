@@ -1,5 +1,5 @@
 Adaption of MVC to fit the browser/server model.
-Model - Any thing with Data, State and application logic having an interface to manipulate.
+Model - Any thing with Data, Sthate and application logic having an interface to manipulate.
 View - JSP
 Controller - Servlet.
 
@@ -8,8 +8,8 @@ Flow
 User performs some action on the HTML Interface.
 Controller (Servlet) gets the request along with some data in the form of FormData (like username and pwd) via HTTP request.
 Controller (Servlet) processes the request and makes request on the Model (Database).
-Result of request made on the Model is usually bundled in the form of JavaBean (Which represents the State of Model).
-Controller(Servlet) forwards the control to the View (JSP) along with the JavaBean(state of Model). 
+Result of request made on the Model is usually bundled in the form of JavaBean (Which represents the Sthate of Model).
+Controller(Servlet) forwards the control to the View (JSP) along with the JavaBean(sthate of Model).
 View(JSP) uses the Bean to generate the HTML Interface representing the view of Model along with some more controls needed for furthur user actions.
 HTML Interface is returned to the browser which forms the View representing the view of Model.
 
@@ -18,6 +18,6 @@ Design Pattern differences in Model2
 ---------------------------------------------
 
 Observer - The View is no more an Observer of the Model. View does receive notification from the Controller when Model changes in the form of JavaBean 
-	which allows the View to retrieve Model's state.
+	which allows the View to retrieve Model's sthate.
 Strategy - Controller Servlet is still the Strategy Object. But its not directly composed with the View. It still represents the behaviour of View and can be replaced for a different behaviour.
 Composite - View is made up of nested set of display elements. In this case they are rendered by a web browser from HTML description.

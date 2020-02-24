@@ -33,8 +33,8 @@ interface PizzaIngredientsFactory
 }
 
 /*
- * Subclasses of Abstract Factory produce the same products as tat of Abstract Factory but with different implementations.
- * Here NYPizzaIngredientsFactory & ChicagoPizzaIngredientsFactory are the concrete classes of PizzaIngredientsFactory which produce the same products as tat of super class with different implementations.
+ * Subclasses of Abstract Factory produce the same products as that of Abstract Factory but with different implementhations.
+ * Here NYPizzaIngredientsFactory & ChicagoPizzaIngredientsFactory are the concrete classes of PizzaIngredientsFactory which produce the same products as that of super class with different implementhations.
  * NYPizzaIngredientsFactory - returning New York Style
  * ChicagoPizzaIngredientsFactory - returning Chicago Style
  */
@@ -103,13 +103,13 @@ abstract class AFPizzaStore
 
 /*
  * Factory Method Pattern encapsulates the Object creation by letting the subclasses decide which objects to create
- * These subclasses tat produce products are called Concrete Creators
+ * These subclasses that produce products are called Concrete Creators
  */
 
 class AFNYPizzaStore extends AFPizzaStore
 {
 	/*
-	 * Factory Method implementation by the subclass
+	 * Factory Method implementhation by the subclass
 	 */
 	protected AFPizza createPizza (String type)
 	{
@@ -129,7 +129,7 @@ class AFNYPizzaStore extends AFPizzaStore
 class AFChicagoPizzaStore extends AFPizzaStore
 {
 	/*
-	 * Factory Method implementation by the subclass
+	 * Factory Method implementhation by the subclass
 	 */
 	protected AFPizza createPizza (String type)
 	{

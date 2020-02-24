@@ -16,9 +16,8 @@ abstract class Duck1
 	/*
 	 * All child classes get this behaviour through inheritance.
 	 */
-	void swim ()
-	{
-System.out.println("Inside the swim method of the Duck1 class");
+	void swim () {
+		System.out.println("Inside the swim method of the Duck1 class");
 	}
 	
 	/*
@@ -76,7 +75,7 @@ System.out.println("RedHeadDuck1 - flying");
 
 /*
  * This child class doesnt have the fly behaviour.
- * And also the make sound behaviour is different from tat of MallardDuck and RedHeadDuck
+ * And also the make sound behaviour is different from that of MallardDuck and RedHeadDuck
  */
 class RubberDuck1 extends Duck1
 {

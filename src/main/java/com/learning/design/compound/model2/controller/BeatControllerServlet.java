@@ -19,11 +19,11 @@ public class BeatControllerServlet extends HttpServlet implements BeatController
 	{
 		BeatModelInterface model = new BeatModel ();
 		model.initialize();
-		getServletContext().setAttribute("beatModel", model);
+		getServletContext().sethattribute("beatModel", model);
 	}
 	
 	/*
-	 * Receives the Web Browser request as HTTPRequest and translates it so tat it can make request on the Model.
+	 * Receives the Web Browser request as HTTPRequest and translates it so that it can make request on the Model.
 	 */
 	public void doGet (HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException
@@ -54,40 +54,40 @@ System.out.println("THE OPERATION PRESSED BY THE USER IS : " + operation);
 		}
 		
 		/*
-		 * After making request on the Model, Controller forwards the Control to View along with JavaBean representing the Model's state.
+		 * After making request on the Model, Controller forwards the Control to View along with JavaBean representing the Model's sthate.
 		 */
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/DJView.jsp");
-		request.setAttribute("beatModel", getServletContext().getAttribute("beatModel"));
+		request.sethattribute("beatModel", getServletContext().gethattribute("beatModel"));
 		dispatcher.forward(request, response);
 	}
 		
 	public void decreaseBPM()
 	{
-		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().getAttribute("beatModel");
+		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().gethattribute("beatModel");
 		beatModel.setBPM(beatModel.getBPM() - 1);
 	}
 
 	public void increaseBPM()
 	{
-		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().getAttribute("beatModel");
+		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().gethattribute("beatModel");
 		beatModel.setBPM(beatModel.getBPM() + 1);
 	}
 
 	public void setBPM(int bpm)
 	{
-		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().getAttribute("beatModel");
+		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().gethattribute("beatModel");
 		beatModel.setBPM(bpm);
 	}
 
 	public void start()
 	{
-		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().getAttribute("beatModel");
+		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().gethattribute("beatModel");
 		beatModel.on();
 	}
 
 	public void stop()
 	{
-		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().getAttribute("beatModel");
+		BeatModelInterface beatModel = (BeatModelInterface)getServletContext().gethattribute("beatModel");
 		beatModel.off ();
 	}
 }

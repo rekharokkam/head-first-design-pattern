@@ -86,9 +86,10 @@ class Espresso extends Beverage
  * 
  * Subclassing sets behaviour of the supertype statically at the compile time. An Objects behaviour can also be extended through Composition and Delegation dynamically at runtime.
  * Decorators have the same Type as the objects they decorate/wrap.
- * Since Decorator has the same interface as tat of the object it decorats Decorated Objects can be passed in the place of Original Objects. Both decorator and the Component are interchangable.
- * This interchangability can be transparent to the client thereby client need not know wether its dealing with the component or the Decorator.
- * Decorator Inherits from the same TYPE as tat of the object it decorates only for TYPE matching not to get the Same Behaviour.
+ * Since Decorator has the same interface as that of the object it decorates Decorated Objects can be passed in the place of Original Objects.
+ * Both decorator and the Component are interchangeable.
+ * This interchangeability can be transparent to the client thereby client need not know whether its dealing with the component or the Decorator.
+ * Decorator Inherits from the same TYPE as that of the object it decorates only for TYPE matching not to get the Same Behaviour.
  *  
  * 
  */
@@ -116,7 +117,7 @@ class Mocha extends CondimentDecorator
 	}
 	
 	/*
-	 * Decorator adds new behaviour not by inheriting it from the supertype but by compising.
+	 * Decorator adds new behaviour not by inheriting it from the supertype but by composing.
 	 * Decorator adds its own behaviour either before and/or after delegating to the Component it decorates to do the rest of the task
 	 * Decorator changes the behaviour of the Component it decorates by adding new functionality before and/or after (or even in the place of) method calls to the component.
 	 * Here Mocha first delegates to the Component it decorates Beverage and then adds its own cost there by changes the behaviour of the Component Beverage class.

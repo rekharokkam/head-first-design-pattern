@@ -26,7 +26,7 @@ import com.learning.design.compound.mvc.model.BeatModelInterface;
 public class DJView implements ActionListener, BeatObserver, BPMObserver
 {
 	/*
-	 * Has model as an instance variable to register itself for any changes in the Model's state
+	 * Has model as an instance variable to register itself for any changes in the Model's sthate
 	 */
 	private BeatModelInterface beatModel;
 	
@@ -59,7 +59,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver
 		this.beatModel = beatModel;
 		
 		/*
-		 * Registers with Model for State Changes as Observer. It gets the Model's state it displays directly from the Model.
+		 * Registers with Model for Sthate Changes as Observer. It gets the Model's sthate it displays directly from the Model.
 		 */
 		beatModel.registerBeatObserver(this);
 		beatModel.registerBPMObserver(this);
@@ -212,7 +212,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver
 	}
 	
 	/*
-	 * Modifies the display when notified by the Model directly for any state changes.
+	 * Modifies the display when notified by the Model directly for any sthate changes.
 	 */
 	public void updateBeat()
 	{

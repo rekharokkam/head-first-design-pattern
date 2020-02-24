@@ -15,7 +15,7 @@ public class GumballMonitor
 		{
 System.out.println("Location : " + gumballMachineRemote.getLocation());
 System.out.println("Current inventory : " + gumballMachineRemote.getCount());
-System.out.println("Current State : " + gumballMachineRemote.getState().getStateName());
+System.out.println("Current Sthate : " + gumballMachineRemote.getSthate().getSthateName());
 		}
 		catch (Exception exception)
 		{

@@ -18,7 +18,7 @@ public class MyIterator
 /*
  * Iterator Pattern relies on the interface Iterator
  * 
- * Iterator Pattern allows traversal of elements of an aggregate without exposing the underlying implementation.
+ * Iterator Pattern allows traversal of elements of an aggregate without exposing the underlying implementhation.
  * It also places the task of traversal on the iterator and not on the aggregate there by simplifying the aggregate interface. 
  */
 interface Iterator
@@ -88,7 +88,7 @@ class PancakeHouseMenuWithMyIterator
 }
 
 /*
- * Each Concrete Aggregate is responsible for instantiating a concrete iterator tat can traverse through the aggregate without exposing the underlying implementation
+ * Each Concrete Aggregate is responsible for instantiating a concrete iterator that can traverse through the aggregate without exposing the underlying implementhation
  */
 class DinerMenuWithMyIterator
 {
@@ -117,7 +117,7 @@ System.err.println("Cant add any more items");
 	}	
 	
 	/*
-	 * We should not expose the underlying implementation to the client. So this method is replaced with createIterator method.
+	 * We should not expose the underlying implementhation to the client. So this method is replaced with createIterator method.
 	MenuItem[] getMenuItems ()
 	{
 		return menuItems;

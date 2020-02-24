@@ -3,28 +3,28 @@ package com.learning.design.proxy.remoteproxy.service;
 import java.io.Serializable;
 import java.util.Random;
 
-public abstract class State implements Serializable
+public abstract class Sthate implements Serializable
 {
-	private String stateName;
+	private String sthateName;
 	/*
 	 * transient keyword is added to tell the JVM not to serialize this object.
 	 */
 	transient protected GumballMachine gumballMachine;
 	
-	State (String stateName, GumballMachine gumballMachine)
+	Sthate (String sthateName, GumballMachine gumballMachine)
 	{
-		this.stateName = stateName;
+		this.sthateName = sthateName;
 		this.gumballMachine = gumballMachine;		
 	}
 	
-	public String getStateName ()
+	public String getSthateName ()
 	{
-		return stateName;
+		return sthateName;
 	}
 	
-	void setStateName (String stateName)
+	void setSthateName (String sthateName)
 	{
-		this.stateName = stateName;
+		this.sthateName = sthateName;
 	}
 	
 	public GumballMachine getGumballMachine()
@@ -42,17 +42,17 @@ public abstract class State implements Serializable
 	abstract void turnCrank ();
 	abstract void dispense () ;
 }
-class NoQuarterState extends State
+class NoQuarterSthate extends Sthate
 {
-	NoQuarterState (GumballMachine gumballMachine)
+	NoQuarterSthate (GumballMachine gumballMachine)
 	{
-		super ("No Quarter State", gumballMachine);
+		super ("No Quarter Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
 	{
 System.out.println("Your Cent has been accepted");
-		gumballMachine.setCurrentState(gumballMachine.getHasQuarterState());
+		gumballMachine.setCurrentSthate(gumballMachine.getHasQuarterSthate());
 	}
 	
 	public void ejectQuarter ()
@@ -71,13 +71,13 @@ System.out.println("There is no coin to dispense the gumball");
 	}
 }
 
-class HasQuarterState extends State
+class HasQuarterSthate extends Sthate
 {
 	private Random randomWinner = new Random (System.currentTimeMillis());
 	
-	HasQuarterState (GumballMachine gumballMachine)
+	HasQuarterSthate (GumballMachine gumballMachine)
 	{
-		super ("Has Quarter State", gumballMachine);
+		super ("Has Quarter Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -88,7 +88,7 @@ System.out.println("You have already inserted the coin. Please wait till u get t
 	public void ejectQuarter ()
 	{
 System.out.println("Here is the coin u inserted");
-		gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+		gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 	}
 	
 	public void turnCrank ()
@@ -97,11 +97,11 @@ System.out.println("You have turned the crank and here comes your gumball");
 		int winner = randomWinner.nextInt(10);
 		if ( (winner == 0) && (gumballMachine.getGumballCount() >= GumballMachine.FREE_GIFT))
 		{
-			gumballMachine.setCurrentState(gumballMachine.getWinnerState());
+			gumballMachine.setCurrentSthate(gumballMachine.getWinnerSthate());
 		}
 		else
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldSthate());
 		}
 	}
 	
@@ -111,11 +111,11 @@ System.out.println("Please wait..........");
 	}
 }
 
-class SoldState extends State
+class SoldSthate extends Sthate
 {
-	SoldState (GumballMachine gumballMachine)
+	SoldSthate (GumballMachine gumballMachine)
 	{
-		super ("Sold State", gumballMachine);
+		super ("Sold Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -139,20 +139,20 @@ System.out.println("Your gumball has been dispensed");
 		gumballMachine.releaseBall();
 		if (gumballMachine.getGumballCount() > 0)
 		{
-			gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+			gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 		}
 		else 
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldOutSthate());
 		}		
 	}
 }
 
-class SoldoutState extends State
+class SoldoutSthate extends Sthate
 {
-	SoldoutState (GumballMachine gumballMachine)
+	SoldoutSthate (GumballMachine gumballMachine)
 	{		
-		super ("Soldout State", gumballMachine);
+		super ("Soldout Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -176,11 +176,11 @@ System.out.println("There is no gumball in the machine to dispense");
 	}
 }
 
-class WinnerState extends State
+class WinnerSthate extends Sthate
 {
-	WinnerState (GumballMachine gumballMachine)
+	WinnerSthate (GumballMachine gumballMachine)
 	{
-		super ("Winner State", gumballMachine);
+		super ("Winner Sthate", gumballMachine);
 	}
 	
 	public void insertQuarter ()
@@ -209,11 +209,11 @@ System.out.println("Congrats you won. Here is your gift");
 		
 		if (gumballMachine.getGumballCount() == 0)
 		{
-			gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+			gumballMachine.setCurrentSthate(gumballMachine.getSoldOutSthate());
 		}
 		else
 		{
-			gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+			gumballMachine.setCurrentSthate(gumballMachine.getNoQuarterSthate());
 		}
 	}
 }

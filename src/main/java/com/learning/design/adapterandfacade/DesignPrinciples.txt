@@ -19,7 +19,7 @@ For any object, care should be taken for the number of classes the Object intera
 
 Guidelines by this Principle are :
 
-Consider any Object, now from any method inside of this Object invoke methods tat belong to
+Consider any Object, now from any method inside of this Object invoke methods that belong to
 
 1) The Object itself
 2) Objects passed in as parameter to the method 

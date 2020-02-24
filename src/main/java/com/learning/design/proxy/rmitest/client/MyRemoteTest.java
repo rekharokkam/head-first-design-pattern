@@ -17,7 +17,7 @@ public class MyRemoteTest
 		try
 		{
 			/*
-			 * RMI deserializes the stub automaticalls. So it is necessary to have the stub class on the client side. If tat is not present then the stub will not be deserialized.
+			 * RMI deserializes the stub automaticalls. So it is necessary to have the stub class on the client side. If that is not present then the stub will not be deserialized.
 			 */
 			MyRemote remoteService = (MyRemote)Naming.lookup("rmi://127.0.0.1/" + args[0] + "/HelloService");
 //System.out.println("Output from remote service : " + remoteService.getWelcomeNote());

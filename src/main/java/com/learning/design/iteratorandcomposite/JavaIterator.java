@@ -124,12 +124,12 @@ System.err.println("Cant add any more items");
 		{
 			if (currentCursorPosition <= 0 )
 			{
-				throw new IllegalStateException ("Cant remove an item until next is called at least once");
+				throw new IllegalSthateException ("Cant remove an item until next is called at least once");
 			}
 			
 			if (currentCursorPosition > menuItems.length)
 			{
-				throw new IllegalStateException ("Cant remove an item beyond the length of aggregate");
+				throw new IllegalSthateException ("Cant remove an item beyond the length of aggregate");
 			}
 			
 			if (null != menuItems[currentCursorPosition -1])

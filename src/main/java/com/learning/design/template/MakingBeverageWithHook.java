@@ -22,7 +22,7 @@ public class MakingBeverageWithHook
 abstract class CaffeineBeverageWithHook
 {
 	/*
-	 * Step of an algorith is declared abstract when the subclasses must provide an implementation for the step.
+	 * Step of an algorith is declared abstract when the subclasses must provide an implementhation for the step.
 	 * Hook is used when any part of an algorithm is optional.
 	 */
 	void prepareReceipe ()
@@ -52,7 +52,7 @@ System.out.println("Pouring the beverage into cup in parent class");
 	/*
 	 * This method is called "HOOK".
 	 * 
-	 * A hook is a method declared in an abstract class and given only a default or an empty implementation.
+	 * A hook is a method declared in an abstract class and given only a default or an empty implementhation.
 	 * A subclass can either override this method or ignore.
 	 */
 	boolean customerWantsCondiments ()
@@ -120,7 +120,7 @@ exception.printStackTrace(System.err);
 
 
 /*
- * Hook customerWantsCondiments is ignored in this class. So this subclass goes with the default implementation of the parent class
+ * Hook customerWantsCondiments is ignored in this class. So this subclass goes with the default implementhation of the parent class
  */
 
 class TeaWithHook extends CaffeineBeverageWithHook

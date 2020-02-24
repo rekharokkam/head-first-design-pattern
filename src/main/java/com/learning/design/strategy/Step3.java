@@ -11,7 +11,7 @@ public class Step3
 
 }
 /*
-* Seperate what changes in the application and ENCAPSULATE it so tat the other parts tat remain the same are not affected.
+* Separate what changes in the application and ENCAPSULATE it so that the other parts that remain the same are not affected.
 * Later any changes made to the encapsulated code like alteration or extending it doesnt affect the rest of the application.
 */
 interface FlyBehaviour
@@ -36,7 +36,7 @@ System.out.println("I DONT FLY");
 }
 
 /*
-* Seperate what changes in the application and ENCAPSULATE it so tat the other parts tat remain the same are not affected.
+* Separate what changes in the application and ENCAPSULATE it so that the other parts that remain the same are not affected.
 * Later any changes made to the encapsulated code like alteration or extending it doesnt affect the rest of the application.
 */
 
@@ -77,16 +77,16 @@ abstract class Duck3
 {
 	
 	/*
-	 * Design Principle - Identify the aspects of application tat vary and seperate them out from those which stays the same.
-	 * DISPLAY and SWIM behaviours remain the same. FlyBehaviour and MakeSound are the behaviours tat vary.  So these behaviours are seperated from the DUCK class and 
-	 * encapsulated in seperate interfaces.
+	 * Design Principle - Identify the aspects of application that vary and separate them out from those which stays the same.
+	 * DISPLAY and SWIM behaviours remain the same. FlyBehaviour and MakeSound are the behaviours that vary.  So these behaviours are separated from the DUCK class and
+	 * encapsulated in separate interfaces.
 	 * 
 	 * Design Principal - Program to an interface not an implementation. Interface means SUPERTYPE
 	 * Interface could be either an interface or an abstract class.
-	 * tats why FlyBehaviour and MakeSound interfaces are used instead of the implementing classes.
+	 * that is why FlyBehaviour and MakeSound interfaces are used instead of the implementing classes.
 	 * 
 	 * Design Principal - Favour Composition over inheritance.
-	 * Instead of having all the behaviours in Duck class and child classes inheriting them, those vary are seperated and encapsulated into different classes of their own.
+	 * Instead of having all the behaviours in Duck class and child classes inheriting them, those vary are separated and encapsulated into different classes of their own.
 	 * This gives better flexibility so as to change the behaviour at runtime. Like having FlyWithWings or DonotFly. 
 	 */
 	FlyBehaviour flyBehaviour;
@@ -171,7 +171,7 @@ System.out.println("I am RedHeadDuck3");
 
 /*
  * This child class doesnt have the fly behaviour.
- * And also the make sound behaviour is different from tat of MallardDuck and RedHeadDuck
+ * And also the make sound behaviour is different from that of MallardDuck and RedHeadDuck
  */
 class RubberDuck3 extends Duck3
 {

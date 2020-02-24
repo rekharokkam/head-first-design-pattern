@@ -1,12 +1,12 @@
 Definition
 ----------
-Defines family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary independently from the client that use it.
+Defines family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from the client that uses it.
 
 Design Principle
 ----------------
 
 1) Encapsulate what varies
-2) Program to Interface and not to implementation
+2) Program to Interface and not to implementhation
 3) Favor Composition over inheritance.
 
 OO Basics

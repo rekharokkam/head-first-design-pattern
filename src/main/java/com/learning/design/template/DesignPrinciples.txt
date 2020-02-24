@@ -15,7 +15,7 @@ Comparison between Strategy and Template Method Patterns
 Strategy - Encapsulate an algorithm by Composition.
 Template - Encapsulate an algorithm by Inheritance.
 
-Strategy - Defines a family of algorithms. Each algorithm is encapsulated and the client can use these algorithms interchangably.
+Strategy - Defines a family of algorithms. Each algorithm is encapsulated and the client can use these algorithms interchangeably.
 Template - Defines outline of an algorithm, subclasses define some of the individual steps of the algorithm. 
 		   There can be different implementations of an algorithm's individual steps by different subclasses.
 		   

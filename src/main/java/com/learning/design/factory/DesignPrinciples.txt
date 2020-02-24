@@ -26,4 +26,4 @@ AFP - Creates a family of Products.
 
 Both the Factory Patterns Encapsulate Object Creation.
 Both the Patterns promote loose coupling by making the client code depend on interface and not on the concrete Classes. 
-There by we also follow the principle - Program to interface and not to implementation .
+There by we also follow the principle - Program to interface and not to implementhation .
